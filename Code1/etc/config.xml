@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+  <!-- turn on our module, required for install support -->
+  <modules>
+    <Olko_Code1>
+      <version>0.1.0</version>
+    </Olko_Code1>
+  </modules>
+  <global>
+    <!-- turn on models -->
+    <models>
+      <modulename>
+        <class>Olko_Code1_Model</class>
+      </modulename>
+    </models>
+    <!-- turn on models -->
+    <blocks>
+      <modulename>
+        <class>Olko_Code1_Model</class>
+      </modulename>
+    </blocks>
+    <!-- turn on database connections -->
+    <resources>
+      <!-- setup is needed for automatic installation -->
+      <modulename_setup>
+        <use>default_setup</use>
+      </modulename_setup>
+      <modulename_write>
+        <use>default_write</use>
+      </modulename_write>
+      <modulename_read>
+        <use>default_read</use>
+      </modulename_read>
+    </resources>
+  </global>
+</config>
