@@ -2,32 +2,48 @@
 <config>
   <!-- turn on our module, required for install support -->
   <modules>
-    <Olko_Code1>
+    <Olko_UserConnect>
       <version>0.1.0</version>
-    </Olko_Code1>
+    </Olko_UserConnect>
   </modules>
   <global>
     <!-- turn on models -->
     <models>
-      <Olko_Code1>
-        <class>Olko_Code1_Model</class>
-      </Olko_Code1>
+      <userconnect>
+        <class>Olko_UserConnect_Model</class>
+        <resourceModel>userconnect_entity</resourceModel>
+      </userconnect>
+      
+      <userconnect_entity>
+        <class>Olko_UserConnect_Model_Entity</class>
+        <entities>
+          <customer_entity>
+            <table>user</table>
+          </customer_entity>
+        </entities>
+      </userconnect_entity>
+      
+      <customer>
+        <rewrite>
+          <customer>Olko_UserConnect_Model_Customer</customer>
+        </rewrite>
+      </customer>
     </models>
     <!-- turn on models -->
     <blocks>
-      <Olko_Code1>
-        <class>Olko_Code1_Block</class>
-      </Olko_Code1>
+      <Olko_UserConnect>
+        <class>Olko_UserConnect_Block</class>
+      </Olko_UserConnect>
       
       <!-- <blocks> -->
-        <catalog>
+        <!-- <catalog>
             <rewrite>
                 <product_view_type_simple>
-                Olko_Code1_Block_ProductViewCase
+                Olko_UserConnect_Block_ProductViewCase
                 </product_view_type_simple>
             </rewrite>
         </catalog>
-        </blocks>
+        </blocks> -->
     </blocks>
     <!-- turn on database connections -->
     <resources>
