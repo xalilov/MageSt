@@ -22,13 +22,12 @@
           </customer_entity>
         </entities>
       </userconnect_entity>
-      
       <customer>
         <rewrite>
           <customer>Olko_UserConnect_Model_Customer</customer>
         </rewrite>
-      </customer>
-    </models>
+      </customer>  
+  	</models>
     <!-- turn on models -->
     <blocks>
       <Olko_UserConnect>
@@ -36,14 +35,14 @@
       </Olko_UserConnect>
       
       <!-- <blocks> -->
-        <!-- <catalog>
+        <catalog>
             <rewrite>
                 <product_view_type_simple>
                 Olko_UserConnect_Block_ProductViewCase
                 </product_view_type_simple>
             </rewrite>
         </catalog>
-        </blocks> -->
+        <!-- </blocks> -->
     </blocks>
     <!-- turn on database connections -->
     <resources>

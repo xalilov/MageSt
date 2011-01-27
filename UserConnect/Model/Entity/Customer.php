@@ -56,15 +56,17 @@ class Olko_UserConnect_Model_Entity_Customer extends Mage_Eav_Model_Entity_Abstr
      */
     protected function _getDefaultAttributes()
     {
-        return array(
-            'entity_type_id',
-            'attribute_set_id',
-            'created_at',
-            'updated_at',
-            'increment_id',
-            'store_id',
-            'website_id'
-        );
+        // return array(
+        //     'entity_type_id',
+        //     'attribute_set_id',
+        //     'created_at',
+        //     'updated_at',
+        //     'increment_id',
+        //     'store_id',
+        //     'website_id'
+        // );
+        
+        return array();
     }
 
     /**
@@ -85,9 +87,9 @@ class Olko_UserConnect_Model_Entity_Customer extends Mage_Eav_Model_Entity_Abstr
         $select = $this->_getWriteAdapter()->select()
             ->from($this->getEntityTable(), array($this->getEntityIdField()))
             ->where('email=?', $customer->getEmail());
-        if ($customer->getSharingConfig()->isWebsiteScope()) {
-            $select->where('website_id=?', (int) $customer->getWebsiteId());
-        }
+        // if ($customer->getSharingConfig()->isWebsiteScope()) {
+        //     $select->where('website_id=?', (int) $customer->getWebsiteId());
+        // }
         if ($customer->getId()) {
             $select->where('entity_id !=?', $customer->getId());
         }
@@ -178,9 +180,9 @@ class Olko_UserConnect_Model_Entity_Customer extends Mage_Eav_Model_Entity_Abstr
     protected function _getLoadRowSelect($object, $rowId)
     {
         $select = parent::_getLoadRowSelect($object, $rowId);
-        if ($object->getWebsiteId() && $object->getSharingConfig()->isWebsiteScope()) {
-            $select->where('website_id=?', (int) $object->getWebsiteId());
-        }
+        // if ($object->getWebsiteId() && $object->getSharingConfig()->isWebsiteScope()) {
+        //     $select->where('website_id=?', (int) $object->getWebsiteId());
+        // }
         return $select;
     }
 
@@ -199,13 +201,12 @@ class Olko_UserConnect_Model_Entity_Customer extends Mage_Eav_Model_Entity_Abstr
             ->from($this->getEntityTable(), array($this->getEntityIdField()))
             //->where('email=?', $email);
             ->where('email=:customer_email');
-        if ($customer->getSharingConfig()->isWebsiteScope()) {
-            if (!$customer->hasData('website_id')) {
-                Mage::throwException(Mage::helper('customer')->__('Customer website ID must be specified when using the website scope.'));
-            }
-            $select->where('website_id=?', (int)$customer->getWebsiteId());
-        }
-
+        // if ($customer->getSharingConfig()->isWebsiteScope()) {
+        //     if (!$customer->hasData('website_id')) {
+        //         Mage::throwException(Mage::helper('customer')->__('Customer website ID must be specified when using the website scope.'));
+        //     }
+        //     $select->where('website_id=?', (int)$customer->getWebsiteId());
+        // }
         if ($id = $this->_getReadAdapter()->fetchOne($select, array('customer_email' => $email))) {
             $this->load($customer, $id);
         }
