@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-    <MagentoBook_ShippingModule>
+    <Olko_Shipping>
       <version>0.1.0</version>
       <depends>
         <Mage_Shipping/>
       </depends>
-    </MagentoBook_ShippingModule>
+    </Olko_Shipping>
   </modules>
   <global>
     <models>
-      <shippingmodule>
-        <class>MagentoBook_ShippingModule_Model</class>
-      </shippingmodule>
+      <shippingmodule_setup>
+        <class>Olko_Shipping_Model</class>
+      </shippingmodule_setup>
     </models>
-    <resources>
+    <resources>  <!-- here we define db connection parameters it called resources -->
       <shippingmodule_setup>
         <setup>
-          <module>MagentoBook_ShippingModule</module>
+          <module>Olko_Shipping</module>
         </setup>
         <connection>
           <use>core_setup</use>
@@ -26,9 +26,9 @@
     </resources>
   </global>
   <default>
-    <carriers>
+    <carriers>  <!-- we want to add it as shipping module -->
       <shippingmodule>
-        <model>MagentoBook/carrier_ShippingModule</model>
+        <model>Olko/carrier_Shipping</model>
       </shippingmodule>
     </carriers>
   </default>
