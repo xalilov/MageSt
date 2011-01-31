@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<config>
+  <modules>
+    <Olko_FullShipping>
+      <version>0.1.0</version>
+      <depends>
+        <Mage_Shipping />
+      </depends>
+    </Olko_FullShipping>
+  </modules>
+
+  <global>
+    <models>
+      <FullShipping>
+        <class>Olko_FullShipping_Model</class>
+      </FullShipping>
+    </models>
+
+    <resources>
+      <FullShipping_setup>
+        <setup>
+          <module>Olko_FullShipping</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </FullShipping_setup>
+    </resources>
+  </global>
+</config>
