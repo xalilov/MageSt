@@ -9,6 +9,7 @@
     </Olko_FullShipping>
   </modules>
 
+
   <global>
     <models>
       <FullShipping>
@@ -28,3 +29,21 @@
     </resources>
   </global>
 </config>
+
+<!--<default>-->
+<!--    <carriers>-->
+<!--        <olko_fullshipping>-->
+<!--            <active>1</active>-->
+<!--            <sallowspecific>0</sallowspecific>-->
+<!--              <model>fullshipping/carrier_fullbonemethod</model>-->
+<!--            <name>Full Bone Method</name>-->
+<!--            <title>Full Bone Method</title>-->
+<!--            <specificerrmsg>-->
+<!--                  This shipping method is currently unavailable.-->
+<!--                  If you would like to ship using this shipping-->
+<!--                  method, please contact us.-->
+<!--            </specificerrmsg>-->
+<!--            <handling_type>F</handling_type>-->
+<!--        </olko_fullshipping>-->
+<!--    </carriers>-->
+<!--</default>-->
