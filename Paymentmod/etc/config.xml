@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<config>
+  <modules>
+    <Olko_PaymentMod>
+      <version>0.1.0</version>
+    </Olko_PaymentMod>
+  </modules>
+
+  <global>
+    <models>
+      <paymentmod>
+      <class>Olko_PaymentMod_Model</class>
+      </paymentmod>
+    </models>
+    <resources>
+      
+      <paymentmod_setup>
+        <setup>
+          <module>Olko_PaymentMod</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </paymentmod_setup>
+  
+      <paymentmod_write>
+        <connection>
+        <use>core_write</use>
+        </connection>
+      </paymentmod_write>
+      
+      <paymentmod_read>
+        <connection>
+        <use>core_read</use>
+        </connection>
+      </paymentmod_read>
+    </resources>
+  
+  </global>
+  <default>
+    <payment>
+      <paymentmod>
+      <active>0</active>
+      <model>paymentmod/paymentMethod</model>
+      <order_status>1</order_status>
+      <title>Credit Card (Olko Payment Module)</title>
+      <cctypes>AE,VI,MC,DI</cctypes>
+      <payment_action>authorize</payment_action>
+      </paymentmod>
+    </payment>
+  </default>
+</config>
