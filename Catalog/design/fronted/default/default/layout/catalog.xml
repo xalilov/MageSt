@@ -1,0 +1,11 @@
+
+<!--add a another one tag in the main configuration -->
+
+<catalog_category_default>
+  <block type="catalog/product_featured" name="product_featured" as="product_featured" template="catalog/product/featured.phtml">
+  </block>
+
+  <block type="catalog/product_featured" name="product_featured" template="catalog/product/featured.phtml">
+        <action method="setLimit"><limit>2</limit></action>
+  </block>
+</catalog_category_default>

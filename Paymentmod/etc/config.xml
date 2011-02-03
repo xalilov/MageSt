@@ -1,22 +1,22 @@
 <?xml version="1.0" ?>
 <config>
   <modules>
-    <Olko_PaymentMod>
+    <Olko_Paymentmod>
       <version>0.1.0</version>
-    </Olko_PaymentMod>
+    </Olko_Paymentmod>
   </modules>
 
   <global>
     <models>
       <paymentmod>
-      <class>Olko_PaymentMod_Model</class>
+      <class>Olko_Paymentmod_Model</class>
       </paymentmod>
     </models>
     <resources>
       
       <paymentmod_setup>
         <setup>
-          <module>Olko_PaymentMod</module>
+          <module>Olko_Paymentmod</module>
         </setup>
         <connection>
           <use>core_setup</use>
@@ -35,7 +35,6 @@
         </connection>
       </paymentmod_read>
     </resources>
-  
   </global>
   <default>
     <payment>
