@@ -1,18 +1,20 @@
+<?xml version="1.0"?>
 <config>
   <modules>
     <Olko_Catalog>
       <version>0.1.0</version>
     </Olko_Catalog>
   </modules>
-
-  <blocks>
-    <catalog>
-      <rewrite>
-        <product_featured>MagentoBook_Catalog_Block_Product_Featured</product_featured>
-      </rewrite>
-      <rewrite>
-        <category_view>MagentoBook_Catalog_Block_Category_View</category_view>
-      </rewrite>
-    </catalog>
-  </blocks>
+    
+  <global>
+    <blocks>
+      <catalog>
+        <rewrite>
+          <product_featured>Olko_Catalog_Block_Product_Featured</product_featured>
+        </rewrite>
+        <rewrite><category_view>Olko_Catalog_Block_Category_View</category_view></rewrite>
+      </catalog>
+    </blocks>  
+  </global>
+  
 </config>
