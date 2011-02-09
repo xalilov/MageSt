@@ -2,7 +2,7 @@
 <layout version="0.1.0">
   <brands_index_index>
     <reference name="content">
-      <block type="helloworld/helloworld" name="helloworld" template="hello/world.phtml"/>
+      <block type="brands/brands" name="" template="brands/brands.phtml"/>
     </reference>
   </brands_index_index>
 </layout>

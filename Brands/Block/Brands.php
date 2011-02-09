@@ -12,9 +12,9 @@ class Olko_Brands_Block_Brands extends Mage_Core_Block_Template
       return parent::_prepareLayout();
     }
 
-    public function getBrands()
-    {
-      return 'brands will go here';
-    }
+    // public function getBrands()
+    // {
+    //   return 'brands will go here';
+    // }
   }
 ?>

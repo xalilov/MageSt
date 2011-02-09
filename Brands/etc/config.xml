@@ -24,6 +24,59 @@
       </updates>
     </layout>
   </frontend>
+  
+  <!-- ADMIN PART OF CONFIG -->
+  <!-- ADMIn Routes -->
+  <admin>
+    <routers>
+      <brands>
+        <use>admin</use>
+        <args>
+          <module>Olko_Brands</module>
+          <frontName>brands</frontName>
+        </args>
+      </brands>
+    </routers>
+  </admin>
+  
+  <!-- admin menu config -->
+  <adminhtml>
+    <menu>
+      <brands module="brands">
+        <title>Brands</title>
+        <sort_order>71</sort_order>
+        <children>
+          <items module="brands">
+            <title>Manage Brands</title>
+            <sort_order>0</sort_order>
+            <action>brands/adminhtml_brands</action>
+          </items>
+        </children>
+      </brands>
+    </menu>
+    <acl>
+      <resources>
+        <all>
+          <title>Allow Everything</title>
+        </all>
+        <admin>
+          <children>
+            <Olko_Brands>
+              <title>Brands Module</title>
+              <sort_order>10</sort_order>
+            </Olko_Brands>
+          </children>
+        </admin>
+      </resources>
+    </acl>
+    <layout>
+      <updates>
+        <brands>
+          <file>brands.xml</file>
+        </brands>
+      </updates>
+    </layout>
+  </adminhtml>
 
   <global>
     <blocks>
@@ -39,12 +92,12 @@
 
     <models>
       <brands>
-        <class>Book_Brands_Model</class>
+        <class>Olko_Brands_Model</class>
         <resourceModel>brands_mysql4</resourceModel>
       </brands>
   
       <brands_mysql4>
-        <class>Book_Brands_Model_Mysql4</class>
+        <class>Olko_Brands_Model_Mysql4</class>
         <entities>
         <brands>
         <table>brands</table>
@@ -56,7 +109,7 @@
     <resources>
       <brands_setup>
         <setup>
-          <module>Book_Brands</module>
+          <module>Olko_Brands</module>
         </setup>
         <connection>
           <use>core_setup</use>
